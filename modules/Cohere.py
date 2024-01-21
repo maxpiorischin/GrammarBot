@@ -23,7 +23,7 @@ def api_post(prompt):
         return f"Error making api request, status code {response.status_code}"
 
 def get_translation(language, message):
-    prompt = f"Given the following message, provide the exact translation to {language}, and do not say anything else other than the translation : {message}"
+    prompt = f"Given the following message, provide the exact translation to {language}, and do not say anything else other than the translation. Just say the translation, do not say anything else. : {message}"
     return api_post(prompt)
 
 
